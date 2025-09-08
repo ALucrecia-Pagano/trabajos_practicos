@@ -19,13 +19,15 @@ while True:
         print(f"se sorteo el numero: {nro} ------ Tu lo tienes en tu carton!!")
     else:
         print(f"se sorteo el numero: {nro}---- No lo tienes en tu carton!")
+
     for fila in carton:
         print(fila)
 
     if any(all(x == 0 for x in fila) for fila in carton):
         print("Linea!!")
 
-    if any(all(x == 0 for x in fila) for fila in carton):
+
+    if all(all(x == 0 for x in fila) for fila in carton):
         print("¡¡BINGO!!")
         break        
 
